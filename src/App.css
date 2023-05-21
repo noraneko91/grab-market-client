@@ -3,30 +3,34 @@
   padding: 0;
   line-height: normal;
 }
-
-#herder {
-  height: 100px;
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
+}
+#header {
+  height: 64px;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid gray;
 }
 #header-area {
-  height: 60px;
-  margin: 2%;
+  width: 1024px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #000;
 }
-
 #header-area img {
-  width: 124px;
+  width: 128px;
   height: 36px;
 }
+
 #body {
-  margin-top: 1%;
-  height: 100vh;
-  width: 1024px;
+  min-height: 100vh;
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 24px;
 }
@@ -35,7 +39,20 @@
   height: 200px;
   background-color: rgb(230, 230, 230);
 }
-
+@media screen and (max-width: 400px) {
+  .product-card {
+    width: 160px !important;
+  }
+  #header {
+    padding: 0 8px;
+  }
+  #body {
+    padding: 0 8px;
+  }
+  .ant-carousel {
+    margin: 0 -8px;
+  }
+}
 .App {
   text-align: center;
 }
