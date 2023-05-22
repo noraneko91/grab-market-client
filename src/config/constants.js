@@ -1,4 +1,4 @@
 export const API_URL =
   process.env.NODE_ENV === "production"
-    ? "https://grab-market-server.herokuapp.com"
+    ? "https://greb-market-server-st.fly.dev"
     : "http://localhost:8080";
